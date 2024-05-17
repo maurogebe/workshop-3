@@ -14,5 +14,8 @@ public class ContextoCalcularPrecio {
         estrategias.add(estrategia);
     }
 
+    public static double calcularPrecio(Producto, ) {
+
+    }
 
 }
