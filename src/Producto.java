@@ -14,11 +14,13 @@ public class Producto {
         this.unidades = unidades;
     }
 
-    public void agregarUnidades(int unidades) {
+    public void modificarUnidades(int unidades) {
         if(unidades > 0) {
             this.unidades += unidades;
+        } else if(unidades < 0 && Math.abs(unidades) < this.unidades) {
+            this.unidades += unidades;
         } else {
-            System.out.println("Debe ser un numero mayor a 0");
+            System.out.println("Ingrese un numero menor a 0 o mayor a 0");
         }
     }
 
@@ -26,7 +28,15 @@ public class Producto {
         return SKU;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     public double getPrecioUnitario() {
         return precioUnitario;
+    }
+
+    public int getUnidades() {
+        return unidades;
     }
 }

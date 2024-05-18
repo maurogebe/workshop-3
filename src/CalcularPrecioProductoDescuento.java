@@ -1,8 +1,26 @@
-public class CalcularPrecioProductoDescuento implements EstrategiaCalcularPrecio {
+public class CalcularPrecioProductoDescuento extends EstrategiaCalculable {
+
+    public CalcularPrecioProductoDescuento(String SKU) {
+        super(SKU);
+    }
 
     @Override
-    public double calcularPrecio(Producto producto) {
-        return 0;
+    public String getSKU() {
+        return super.SKU;
+    }
+
+    @Override
+    public double calcularPrecio(ProductoSeleccionado producto) {
+        switch (producto.getUnidades()) {
+            case 1:
+            case 2:
+                return producto.getUnidades() * producto.getProducto().getPrecioUnitario();
+            case 3:
+            case 4:
+                return (producto.getUnidades() * producto.getProducto().getPrecioUnitario()) * .8;
+            default:
+                return (producto.getUnidades() * producto.getProducto().getPrecioUnitario()) * .5;
+        }
     }
 
 }

@@ -1,8 +1,16 @@
-public class CalcularPrecioProductoNormal implements EstrategiaCalcularPrecio {
+public class CalcularPrecioProductoNormal extends EstrategiaCalculable {
 
-    @Override
-    public double calcularPrecio(Producto producto) {
-        return 0;
+    public CalcularPrecioProductoNormal(String SKU) {
+        super(SKU);
     }
 
+    @Override
+    public String getSKU() {
+        return super.SKU;
+    }
+
+    @Override
+    public double calcularPrecio(ProductoSeleccionado producto) {
+        return producto.getUnidades() * producto.getProducto().getPrecioUnitario();
+    }
 }
