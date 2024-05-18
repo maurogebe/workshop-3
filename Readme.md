@@ -3,7 +3,7 @@ Integrantes:
 + Stefani Torres stefanigtorres@gmail.com
 + Mauricio Guerra maurogebe.96@gmail.com
 
-Conclusion
+Conclusión
 
 Para nuestro ejercicio de Workshop se requería construir una aplicación de comercio que le permitiera a una tienda vender varios productos. Esta, tenía la particularidad de calcular el precio de venta de acuerdo a un SKU (referencia-codificador) y de manejar un carrito de compras que permitiera agregar o eliminar un producto, y hacer un seguimiento de los productos seleccionados.
 
