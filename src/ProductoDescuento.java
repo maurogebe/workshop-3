@@ -1,6 +1,6 @@
-public class CalcularPrecioProductoDescuento extends EstrategiaCalculable {
+public class ProductoDescuento extends EstrategiaCalculable {
 
-    public CalcularPrecioProductoDescuento(String SKU) {
+    public ProductoDescuento(String SKU) {
         super(SKU);
     }
 

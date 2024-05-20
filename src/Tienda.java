@@ -18,6 +18,7 @@ public class Tienda {
     }
 
     public void agregarProductoCarrito(String SKU, int cantidad) {
+        boolean encontroProducto = false;
         for (Producto producto : this.productos) {
             if(producto.getSKU().equals(SKU)) {
                 if(cantidad > 0 && cantidad <= producto.getUnidades()) {
@@ -27,10 +28,10 @@ public class Tienda {
                 } else {
                     System.out.println("Excede el numero de unidades actuales");
                 }
-            } else {
-                System.out.println("Este producto no existe en nuestra tienda");
+                encontroProducto = true;
             }
         }
+        if(!encontroProducto) System.out.println("Este producto no existe en nuestra tienda");
     }
 
     public Carrito getCarrito() {

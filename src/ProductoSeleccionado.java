@@ -11,7 +11,8 @@ public class ProductoSeleccionado {
     }
 
     private void calcularPrecio() {
-        this.totalPrecio = ContextoCalcularPrecio.calcularPrecio(this);
+        CalcularPrecio contexto = new CalcularPrecio();
+        this.totalPrecio = contexto.calcularPrecio(this);
     }
 
     public void modificarUnidades(int cantidad) {
